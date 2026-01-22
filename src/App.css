@@ -1,0 +1,108 @@
+:root {
+  --max-width: 550px;
+  --radius: 6px;
+  --shadow: 0px 1px 3px rgba(0,0,0,0.1);
+}
+body{
+  margin:0;
+  font-family: "Inter", sans-serif;
+}
+header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  height: 80px;
+  font-size: 1.2rem;
+  box-shadow: var(--shadow);
+}
+header > img {
+  width:40px;
+}
+
+.Container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.readyContainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 40px 20px 20px;
+  padding: 12px;
+  background: rgb(241, 239, 239);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  font-size: 0.8rem;
+}
+
+.recipeButton button {
+  background: rgb(225, 81, 81);
+  color: white;
+  border: none;
+  padding: 7px 12px;
+  border-radius: var(--radius);
+  cursor: pointer;
+}
+
+div.inputDiv{
+  display: flex;
+  justify-content: center;
+  gap:11px;
+  margin:40px 20px 15px;
+  height: 30px;
+}
+.List {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.List h2 {
+  margin-bottom: 6px;
+}
+
+ul {
+  padding-left: 18px;
+  margin: 0;
+}
+
+li {
+  padding: 4px 0;
+}
+
+input{
+width:400px;
+border-width:1px;
+border-radius: 5px;
+padding-left: 5px;
+}
+.inputDiv button {
+  width: 180px;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.suggestedRecipe{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  width: 100%;
+}
+
+.recipe{
+  margin:35px;
+}
+
+.suggested-recipe-container {
+    color: #475467;
+    line-height: 30px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
