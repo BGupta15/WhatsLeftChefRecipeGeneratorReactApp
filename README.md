@@ -1,16 +1,54 @@
-# React + Vite
+Chef Claude is a modern React application that turns your random kitchen ingredients into delicious recipe ideas. Built with React 18, Vite, and powered by the Hugging Face Inference API, it leverages the Mistral-7B Large Language Model to act as your personal digital chef.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Features
+Ingredient Management: Add ingredients dynamically to your "pantry" list.
 
-Currently, two official plugins are available:
+AI-Powered Recipes: Generates creative recipes using the Mistral-7B-Instruct model.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Markdown Rendering: Recipes are formatted beautifully with headers, bold text, and bullet points using react-markdown.
 
-## React Compiler
+Modern UI/UX: A clean, responsive interface designed for both home cooks and professional foodies.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Tech StackTechnologyPurposeReactUI Library for building the component architecture.ViteLightning-fast build tool and development server.Hugging Face SDKInterface for connecting to AI models.Mistral-7B-v0.3The LLM used to process ingredients and generate text.React MarkdownConverts the AI's raw text response into formatted HTML.
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Setup and Installation
+1. Prerequisites
+Node.js (Latest LTS version recommended)
+
+A Hugging Face account and an Access Token (Available at hf.co/settings/tokens)
+
+2. Clone the Repository
+Bash
+git clone <your-repository-url>
+cd chef-claude
+3. Install Dependencies
+Bash
+npm install
+4. Environment Configuration
+Create a .env file in the root directory and add your Hugging Face API key:
+
+Code snippet
+VITE_HF_ACCESS_TOKEN=your_hugging_face_token_here
+5. Start the Development Server
+Bash
+npm run dev
+Open http://localhost:5173 in your browser to start cooking!
+
+
+Project Architecture
+Main.jsx: Manages the global state for ingredients and the generated recipe.
+
+ai.js: Logic for communicating with the Hugging Face Inference API.
+
+IngredientsList.jsx: Handles the display of the current pantry and the "Get Recipe" button logic.
+
+Recipe.jsx: A dedicated component for rendering the AI output via react-markdown.
+
+
+Usage
+Type an ingredient (e.g., "Eggplant") into the input box and click Add Ingredient.
+
+Once you have at least 4 ingredients, the "Get a recipe" section will appear.
+
+Click the button and wait for Chef Claude to generate a custom markdown recipe based on your list.
